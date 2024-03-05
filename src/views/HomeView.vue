@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import SvgProfil from '@/components/SvgProfil.vue';
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h1>Page HomeView</h1>
+    <p>voici le svg</p>
+    <SvgProfil />
   </main>
 </template>
