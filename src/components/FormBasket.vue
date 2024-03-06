@@ -5,7 +5,14 @@ import SvgProfil from './BasketProfil.vue';
 import SvgDessus from './BasketDessus.vue';
 import { FormKit }  from "@formkit/vue";
 
-const chaussure = ref<Basket>({});
+// const chaussure = ref<Basket>({});
+
+const props = defineProps<{
+  data?: Basket;
+  id?: string;
+}>();
+
+const chaussure = ref<Basket>(props.data ?? {});
 
 </script>
 
