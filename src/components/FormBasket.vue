@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import	type { ChaussureSvg } from '@/types-svg';
+import	type { Basket } from '@/types';
 import { ref } from 'vue';
-import SvgProfil from './SvgProfil.vue';
-import SvgDessus from './SvgDessus.vue';
+import SvgProfil from './BasketProfil.vue';
+import SvgDessus from './BasketDessus.vue';
 import { FormKit }  from "@formkit/vue";
 
-const chaussure = ref<ChaussureSvg>({});
+const chaussure = ref<Basket>({});
 
 </script>
 
@@ -19,10 +19,10 @@ const chaussure = ref<ChaussureSvg>({});
 
 <div class="carousel w-64">
 <SvgProfil class="carousel-item w-64" v-bind="chaussure" id="profil" />
-<!-- <SvgDessus class="carousel-item w-64" v-bind="chaussure" id="dessus"/> -->
+<SvgDessus class="carousel-item w-64" v-bind="chaussure" id="dessus"/>
 </div>
 
-<FormKit type="form" v-model="chaussure"/>
+<FormKit type="form" v-model="chaussure">
 <FormKit name="semelle" label="semelle" value="#000000" type="color" />
 <FormKit name="empeigne" label="empeigne" value="#FFFFFF" type="color" />
 <FormKit name="pointe" label="pointe" value="#FFFFFF" type="color" />
@@ -31,5 +31,7 @@ const chaussure = ref<ChaussureSvg>({});
 <FormKit name="languette" label="languette" value="#000000" type="color" />
 <FormKit name="lacet" label="lacet" value="#FFFFFF" type="color" />
 <FormKit name="trimestre" label="trimestre" value="#FFFFFF" type="color" />
+
+</FormKit>
 </div>
-</template>
+</template>@/types./BasketDessus.vue./BasketProfil.vue

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SvgProfil from '@/components/SvgProfil.vue';
+import SvgProfil from '@/components/BasketProfil.vue';
 </script>
 
 <template>

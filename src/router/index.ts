@@ -13,7 +13,13 @@ const router = createRouter({
       path: '/EditChaussure',
       name: 'EditChaussure',
       component: () => import('../views/EditChaussure.vue')
+    },
+    {
+      path: '/AfficheImages',
+      name: 'AfficheImages',
+      component: () => import('../views/AfficheImages.vue')
     }
+
   ]
 })
 
