@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router/auto'
 
 </script>
 
@@ -10,7 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <nav class="bg-blue-400 text-grey-500">
         <RouterLink to="/" class="m-2">Home</RouterLink>
-        <RouterLink to="/EditChaussure">Chaussure</RouterLink>
+        <RouterLink to="/basket/new">Chaussure</RouterLink>
       </nav>
     </div>
   </header>
