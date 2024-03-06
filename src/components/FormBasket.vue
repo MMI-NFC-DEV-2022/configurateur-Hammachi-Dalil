@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import	type { Basket } from '@/types';
 import { colors } from '@/types';
+import { materiaux } from '@/types';
 import { ref } from 'vue';
 import SvgProfil from './BasketProfil.vue';
 import SvgDessus from './BasketDessus.vue';
@@ -31,7 +32,7 @@ const chaussure = ref<Basket>(props.data ?? {});
 </div>
 
 <FormKit type="form" v-model="chaussure">
-    <FormKit name="semelle" label="semelle" value="#000000" type="radio" :options="colors" :sections-schema="{
+    <FormKit name="semelle" label="semelle"  type="radio" :options="colors" :sections-schema="{
         inner: {$el: null},
         decorator: {$el: null},
     }"
@@ -41,6 +42,21 @@ const chaussure = ref<Basket>(props.data ?? {});
             <div
                 class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
                 :style="{ backgroundColor: context.option.value }" 
+                />
+                <span class="sr-only">{{ context.option.label }}</span>
+        </template>
+    </FormKit>
+
+    <FormKit name="materiaux" label="Matériaux" type="radio" :options="materiaux" :sections-schema="{
+        inner: {$el: null},
+        decorator: {$el: null},
+    }"
+    input-class="peer sr-only"
+    options-class="flex gap-1" >
+        <template #label="context">
+            <div
+                class="h-24 w-24 rounded-full border-2 peer-checked:border-red-600 bg-cover"
+                :style="{ backgroundImage: `url(${context.option.value})` }" 
                 />
                 <span class="sr-only">{{ context.option.label }}</span>
         </template>

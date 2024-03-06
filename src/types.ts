@@ -23,3 +23,18 @@ export const colors = {
   "#800000": "Marron",
   "#808000": "Olive",
 };
+
+export const materiaux = [
+  {
+    value: "/images/cuir.jpg",
+    label: "Cuir",
+  },
+  {
+    value: "https://th.bing.com/th/id/OIP.hmgEREm7jNOuoYEI3xh1CAHaHa?rs=1&pid=ImgDetMain",
+    label: "Tissu",
+  },
+  {
+    value: "https://th.bing.com/th/id/R.b298d42fbb57e922feb1c5c7759b2998?rik=pftTtir1vOTQBw&pid=ImgRaw&r=0",
+    label: "Synthétique",
+  },
+];
